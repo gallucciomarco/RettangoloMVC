@@ -18,16 +18,45 @@ public class RettangoloControl {
     RettangoloView view;
     
     
-    public RettangoloControl() {
-    }
-    
     public RettangoloControl(RettangoloModel model, RettangoloView view) {
         this.model = model;
         this.view = view;
     }
     
+    public double getBase() {
+        return model.getBase();
+    }
+
+    public void setBase(double base) {
+        model.setBase(base);
+    }
+
+    public double getAltezza() {
+        return model.getAltezza();
+    }
+
+    public void setAltezza(double altezza) {
+        model.setAltezza(altezza);
+    }
     
-   
+    public double calcolaPerimetro(){
+        return model.calcolaPerimetro();
+    }
+    
+    public double calcolaArea(){
+        return model.calcolaArea();
+    }
     
     
+    public void aggiornaDati(double base, double altezza){
+        view.mostraDati(base, altezza);;
+    }
+    
+    public void aggiornaPerimetro(double perimetro){
+        view.mostraPerimetro(perimetro);
+    }
+    
+    public void aggiornaArea(double area){
+        view.mostraArea(area);
+    }
 }

@@ -16,6 +16,18 @@ public class RettangoloMVC {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        RettangoloModel model = new RettangoloModel(10, 13);
+        RettangoloView view = new RettangoloView();
+        
+        RettangoloControl control = new RettangoloControl(model, view);
+        
+        control.aggiornaDati(model.getBase(), model.getAltezza());
+        control.aggiornaPerimetro(model.calcolaPerimetro());
+        control.aggiornaArea(model.calcolaArea());
+        
+        
     }
     
 }
